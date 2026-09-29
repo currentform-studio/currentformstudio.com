@@ -282,6 +282,13 @@
   }
   .foot .fm { font-size: 15px; display: flex; align-items: baseline; gap: .38em; }
   .foot .meta { font-family: var(--mono); font-size: 10.5px; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-soft); }
+  .foot-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+  .foot .meta-link {
+    font-family: var(--mono); font-size: 9.5px; letter-spacing: .08em;
+    color: var(--ink-soft); opacity: .75; text-decoration: none;
+    transition: color .25s, opacity .25s;
+  }
+  .foot .meta-link:hover { color: var(--accent); opacity: 1; }
 
   @media (max-width: 680px) {
     .person { grid-template-columns: 1fr; }
@@ -355,7 +362,10 @@
   </div>
   <div class="wrap foot">
     <p class="fm"><span class="wm-name">Currentform</span> <span class="wm-studio">Studio</span></p>
-    <p class="meta">&copy; 2026</p>
+    <div class="foot-meta">
+      <p class="meta">&copy; 2026</p>
+      <a class="meta-link" href="/privacy">Privacy Policy</a>
+    </div>
   </div>
 </footer>
 
