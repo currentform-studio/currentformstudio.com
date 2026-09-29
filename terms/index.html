@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SMS Terms &amp; Conditions · Currentform Studio</title>
+  <meta name="description" content="Terms and conditions for the Currentform Studio SMS messaging program.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://currentformstudio.com/terms">
+  <style>
+  /* Shares tokens + nav/footer with index.html — keep in sync. */
+  @font-face {
+    font-family: "Urbanist";
+    src: url("/assets/fonts/urbanist-var.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --navy:     #0B1D2D;
+    --teal:     #5FA5A0;
+    --ivory:    #F4F2ED;
+    --graphite: #3A3F45;
+    --gold:     #C8A46B;
+
+    --ground:        var(--ivory);
+    --ground-2:      #ECE9E2;
+    --ink:           var(--navy);
+    --ink-soft:      #5A6672;
+    --accent:        #3E7B76;
+    --accent-soft:   var(--teal);
+    --metal:         #A8854E;
+    --card:          #FBFAF7;
+    --hairline:      rgba(11,29,45,.14);
+    --hairline-soft: rgba(11,29,45,.08);
+
+    --display: "Urbanist", "Avenir Next", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --mono:    ui-monospace, "SF Mono", "SFMono-Regular", Menlo, monospace;
+    --maxw: 1200px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground:   #0B1D2D;
+      --ground-2: #081521;
+      --ink:      #EFEDE7;
+      --ink-soft: #94A1AC;
+      --accent:   #7FBDB8;
+      --accent-soft: #5FA5A0;
+      --metal:    #C8A46B;
+      --card:     #10263A;
+      --hairline:      rgba(239,237,231,.16);
+      --hairline-soft: rgba(239,237,231,.09);
+    }
+  }
+  :root[data-theme="light"] {
+    --ground:#F4F2ED; --ground-2:#ECE9E2; --ink:#0B1D2D; --ink-soft:#5A6672;
+    --accent:#3E7B76; --accent-soft:#5FA5A0; --metal:#A8854E; --card:#FBFAF7;
+    --hairline:rgba(11,29,45,.14); --hairline-soft:rgba(11,29,45,.08);
+  }
+  :root[data-theme="dark"] {
+    --ground:#0B1D2D; --ground-2:#081521; --ink:#EFEDE7; --ink-soft:#94A1AC;
+    --accent:#7FBDB8; --accent-soft:#5FA5A0; --metal:#C8A46B; --card:#10263A;
+    --hairline:rgba(239,237,231,.16); --hairline-soft:rgba(239,237,231,.09);
+  }
+
+  * { box-sizing: border-box; margin: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: var(--display);
+    background: var(--ground);
+    color: var(--ink);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(24px, 5vw, 64px); }
+
+  ::selection { background: var(--accent-soft); color: var(--ground); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+  /* ---------- fixed hairline nav ---------- */
+  nav {
+    position: fixed; inset: 0 0 auto 0; z-index: 20;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    background: color-mix(in srgb, var(--ground) 82%, transparent);
+    border-bottom: 1px solid var(--hairline-soft);
+  }
+  .nav-inner {
+    max-width: var(--maxw); margin: 0 auto;
+    padding: 20px clamp(24px, 5vw, 64px);
+    display: flex; align-items: baseline; justify-content: space-between;
+  }
+  .wordmark {
+    font-size: 17px; letter-spacing: .01em; color: var(--ink);
+    text-decoration: none; white-space: nowrap;
+    display: flex; align-items: baseline; gap: .38em;
+  }
+  .wm-name { font-weight: 600; letter-spacing: -0.01em; }
+  .wm-studio { font-weight: 300; opacity: .9; letter-spacing: .01em; }
+  nav a.navlink {
+    font-family: var(--mono); font-size: 11.5px; letter-spacing: .22em;
+    text-transform: uppercase; color: var(--ink-soft); text-decoration: none;
+    transition: color .25s;
+  }
+  nav a.navlink:hover { color: var(--accent); }
+
+  /* ---------- policy ---------- */
+  .policy {
+    max-width: 68ch;
+    padding: clamp(130px, 20vh, 190px) 0 clamp(80px, 12vh, 140px);
+  }
+  .eyebrow {
+    font-family: var(--mono); font-size: 11.5px; letter-spacing: .28em;
+    text-transform: uppercase; color: var(--accent);
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: clamp(20px, 3vh, 30px);
+  }
+  .eyebrow::before { content: ""; width: 34px; height: 1px; background: var(--accent); opacity: .55; }
+  .policy h1 {
+    font-size: clamp(40px, 5.6vw, 72px);
+    font-weight: 560; line-height: 1.04; letter-spacing: -0.025em;
+    margin-bottom: clamp(28px, 4vh, 44px);
+  }
+  .policy h2 {
+    font-size: clamp(22px, 2.2vw, 28px); font-weight: 500;
+    letter-spacing: -0.015em; line-height: 1.2;
+    margin-top: clamp(48px, 7vh, 72px); padding-top: clamp(28px, 4vh, 40px);
+    border-top: 1px solid var(--hairline-soft);
+    margin-bottom: 18px;
+  }
+  .policy h3 {
+    font-size: 18px; font-weight: 600; letter-spacing: -0.01em;
+    margin: 28px 0 10px;
+  }
+  .policy p, .policy li {
+    font-size: clamp(16.5px, 1.4vw, 18px); line-height: 1.68;
+  }
+  .policy p + p, .policy p + ul, .policy ul + p { margin-top: 1em; }
+  .policy ul { padding-left: 1.2em; }
+  .policy li + li { margin-top: .45em; }
+  .policy li::marker { color: var(--accent); }
+  .policy a { color: var(--accent); text-underline-offset: 3px; }
+  .policy .lede { color: var(--ink-soft); }
+  .policy .callout {
+    margin-top: 1.4em; padding: 20px 24px;
+    background: var(--card); border-left: 2px solid var(--metal);
+  }
+
+  /* ---------- footer ---------- */
+  footer { border-top: 1px solid var(--hairline-soft); padding: 44px 0 56px; }
+  .foot-wave { width: min(240px, 46vw); margin-bottom: 26px; opacity: .9; }
+  .foot-wave img { width: 100%; height: auto; display: block; }
+  :root[data-theme="dark"] .foot-wave { opacity: .85; }
+  .foot {
+    display: flex; flex-wrap: wrap; gap: 14px 28px;
+    align-items: baseline; justify-content: space-between;
+  }
+  .foot .fm { font-size: 15px; display: flex; align-items: baseline; gap: .38em; }
+  .foot .meta { font-family: var(--mono); font-size: 10.5px; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-soft); }
+  .foot-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+  .foot .meta-link {
+    font-family: var(--mono); font-size: 9.5px; letter-spacing: .08em;
+    color: var(--ink-soft); opacity: .75; text-decoration: none;
+    transition: color .25s, opacity .25s;
+  }
+  .foot .meta-link:hover { color: var(--accent); opacity: 1; }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="wordmark" href="/"><span class="wm-name">Currentform</span> <span class="wm-studio">Studio</span></a>
+    <a class="navlink" href="/#contact">Contact</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <article class="policy">
+    <p class="eyebrow">Effective September 28, 2026</p>
+    <h1>SMS Terms &amp; Conditions</h1>
+
+    <p class="lede">These terms govern the <strong>Currentform Studio</strong> SMS messaging program, operated by Currentform LLC, doing business as Currentform Studio (&ldquo;Currentform Studio,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;). By opting in to receive text messages from us, you agree to these terms.</p>
+
+    <h2>1. Program description</h2>
+    <p>The Currentform Studio SMS program sends customer-care messages related to the Currentform Studio AI assistant and your account interactions. These include responses to your requests, assistant notifications, and account-related communications. We do not send marketing or promotional messages through this program.</p>
+
+    <h2>2. Opting in</h2>
+    <p>You opt in by providing your mobile phone number and expressly agreeing to receive text messages from Currentform Studio. Consent to receive text messages is not a condition of any purchase.</p>
+
+    <h2>3. Message frequency and cost</h2>
+    <ul>
+      <li>Message frequency varies based on user activity.</li>
+      <li>Message and data rates may apply.</li>
+    </ul>
+
+    <h2>4. Help and opting out</h2>
+    <ul>
+      <li><strong>For help, reply HELP to any message, or email privacy@currentformstudio.com.</strong></li>
+      <li><strong>To stop receiving messages, reply STOP to any message.</strong> You will receive one final message confirming that you have been unsubscribed. After that, you will receive no further messages unless you opt in again.</li>
+    </ul>
+
+    <h2>5. Customer support</h2>
+    <p>For questions about the SMS program, contact Currentform Studio at <a href="mailto:privacy@currentformstudio.com">privacy@currentformstudio.com</a>.</p>
+
+    <h2>6. Carrier liability</h2>
+    <p>Carriers are not liable for delayed or undelivered messages.</p>
+
+    <h2>7. Privacy</h2>
+    <p>We do not sell, rent, or share your mobile phone number or SMS opt-in data with third parties for marketing purposes. For details on how we collect, use, and protect your information, see our <a href="/privacy">Privacy Policy</a>.</p>
+
+    <h2>8. Changes to these terms</h2>
+    <p>We may update these terms from time to time. When we do, we will revise the effective date at the top of this page.</p>
+
+    <h2>9. Contact us</h2>
+    <p>Currentform LLC (d/b/a Currentform Studio)<br>
+      <a href="mailto:privacy@currentformstudio.com">privacy@currentformstudio.com</a></p>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-wave"><img src="/assets/wave.svg" alt="" /></div>
+  </div>
+  <div class="wrap foot">
+    <p class="fm"><span class="wm-name">Currentform</span> <span class="wm-studio">Studio</span></p>
+    <div class="foot-meta">
+      <p class="meta">&copy; 2026</p>
+      <a class="meta-link" href="/privacy">Privacy Policy</a>
+      <a class="meta-link" href="/terms">Terms &amp; Conditions</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
